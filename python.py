@@ -2150,11 +2150,49 @@ matrix = [[1,2,3],
 # print("".join(s2))
             
 # s = "a1c1e1"
-s = "a1b2c3d4e"
-res = ''
-for i in range(len(s)):
-    if s[i].isdigit():
-        res += chr(ord(s[i-1]) + 1)
-    else:
-        res += s[i]
-print(res)
+# s = "a1b2c3d4e"
+# res = ''
+# for i in range(len(s)):
+#     if s[i].isdigit():
+#         res += chr(ord(s[i-1]) + 1)
+#     else:
+#         res += s[i]
+# print(res)
+
+# s = list("42")
+# ans = 0
+# n = len(s)
+# i = 0
+# while n:
+#     ans += (ord(s[i]) - 48) * 10
+#     print(ans)
+#     i+=1
+#     n-=1
+# print(ans)
+
+# s = "K1:L2"
+# # s = "A1:F1"
+# # s = "U7:X9"
+# ans = []
+# n = int(s[-1])
+# m = int(s[1])
+# a = ord(s[0])
+# b = ord(s[3])
+# for x in range(a, b + 1):
+#     i = m
+#     while i <= n:
+#         ans.append(chr(x) + str(i))
+#         i += 1
+# print(ans)
+
+# s = "ELELEEL"
+# count = 0
+# ls = []
+# for i in s:
+#     if i == 'E':
+#         count += 1
+#         ls.append(count)
+#     else:
+#         count -= 1
+#         ls.append(count)
+# print(ls)
