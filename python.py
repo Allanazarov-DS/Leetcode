@@ -2196,3 +2196,154 @@ matrix = [[1,2,3],
 #         count -= 1
 #         ls.append(count)
 # print(ls)
+
+
+# ans = [[1]]
+# # print(ans[-1])
+# i = 2
+# while i != 0:
+#     ls = [1]
+#     n = ans[-1]
+#     for x in range(1, len(n) - 1):
+#         ls.append(n[i] + n[i + 1])
+#     ls.append(1)
+#     ans.append(ls)
+    
+#     i -= 1
+# print(ans)
+# numRows = 3
+# i = 0
+# ans = [[1]]
+# while i < numRows:
+
+#     i += 1 
+
+# # Output: [[1],
+#         # [1,1],
+#        # [1,2,1],
+#       # [1,3,3,1],
+#      # [1,4,6,4,1]]
+    # [1,5,10,10,5,1]
+
+
+# original = [1,2,3]
+# m = 1
+# n = 3
+# ls = []
+# while m:
+#     ls.append(original[:n])
+#     original = original[n:]
+#     m -= 1
+# print(ls)
+# 
+
+# s = "zbax"    
+# k = 2
+# s = "iiii"
+# k = 1
+# ls = []
+# for i in s:
+#     ls.append(ord(i) - 96)
+# print(ls)
+# while k:
+#     ls = [int(i) for i in list(str(sum(ls)))]
+#     k -= 1
+# print(ls[0])
+
+# n = 4
+# n = 2
+# count = 0
+# while n >= 3:
+#     n -= 3
+#     count += 1
+# print(count % 2 == 0)
+
+# n = 2
+# i = 0
+# c = 0
+# if n == 0:
+#     print(1)
+# while i < (10**n):
+#     c += 1
+#     i += 1
+# print(c - (9 * (n - 1)))
+# i = 100
+# c = 0
+# while i < 1000:
+#     for x in str(i):
+#         if str(i).count(x) < 2:
+#             c += 1
+#             print(i)
+#             break   
+#     i += 1
+# print(c)
+
+# s = "xywrrmp"
+# t = "xywrrmu#p"
+# print(len(s.replace('#', "")) == len(t.replace("#", "")))
+
+# stones = [2,7,4,1,8,1]
+# stones = [1]
+# while len(stones) != 1:
+#     max1 = max(stones)
+#     stones.remove(max1)
+#     max2 = max(stones)
+#     stones.append(max1)
+#     if max1 == max2:
+#         stones.remove(max1)
+#         stones.remove(max2)
+#         print(stones)
+#     if max1 != max2:
+#         print(stones)
+#         stones.remove(max1)
+#         stones.remove(max2)
+#         stones.append(max1 - max2)
+# # print(max1, max2)
+# print(stones[0])
+
+# stones = [2,7,4,1,8,1]
+# while len(stones) != 1:
+#     stones = sorted(stones)
+#     print(stones)
+#     max1 = stones[-1]
+#     max2 = stones[-2]
+#     if max1 == max2:
+#         stones = stones[:len(stones)-2]
+#     else:
+#         stones = stones[:len(stones)-2]
+#         stones.append(max1 - max2)
+
+# print(stones[0] if stones[0] else 0)
+
+# num = 100
+num = -7
+# re = ''
+# minus = ''
+# if num < 0:
+#     minus = '-'
+
+#     num *= -1
+    
+# while num:
+#     re +=  str(num % 7)
+#     num //= 7
+# print(minus + re[::-1])
+
+import pandas as pd
+
+# Creating the Students table
+students_data = {
+    'student_id': [1, 2, 13, 6],
+    'student_name': ['Alice', 'Bob', 'John', 'Alex']
+}
+students_df = pd.DataFrame(students_data)
+
+# Creating the Subjects table
+subjects_data = {
+    'subject_name': ['Math', 'Physics', 'Programming']
+}
+subjects_df = pd.DataFrame(subjects_data)
+
+# Saving the dataframes as CSV files
+students_df.to_csv('students.csv', index=False)
+subjects_df.to_csv('subjects.csv', index=False)
