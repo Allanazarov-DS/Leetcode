@@ -2329,21 +2329,178 @@ num = -7
 #     num //= 7
 # print(minus + re[::-1])
 
-import pandas as pd
+# import pandas as pd
 
-# Creating the Students table
-students_data = {
-    'student_id': [1, 2, 13, 6],
-    'student_name': ['Alice', 'Bob', 'John', 'Alex']
-}
-students_df = pd.DataFrame(students_data)
+# # Creating the Students table
+# students_data = {
+#     'student_id': [1, 2, 13, 6],
+#     'student_name': ['Alice', 'Bob', 'John', 'Alex']
+# }
+# students_df = pd.DataFrame(students_data)
 
-# Creating the Subjects table
-subjects_data = {
-    'subject_name': ['Math', 'Physics', 'Programming']
-}
-subjects_df = pd.DataFrame(subjects_data)
+# # Creating the Subjects table
+# subjects_data = {
+#     'subject_name': ['Math', 'Physics', 'Programming']
+# }
+# subjects_df = pd.DataFrame(subjects_data)
 
-# Saving the dataframes as CSV files
-students_df.to_csv('students.csv', index=False)
-subjects_df.to_csv('subjects.csv', index=False)
+# # Saving the dataframes as CSV files
+# students_df.to_csv('students.csv', index=False)
+# subjects_df.to_csv('subjects.csv', index=False)
+
+
+# words = ["cool","lock","cook"]
+# checker = words[0]
+# res = []
+
+# for i in range(len(words[1:])):
+#     for j in words[i]:
+#         if j in checker:
+#             res.append(j)
+#             words[i] = words[i].replace(j, "", 1)
+# print(res)
+
+# n = 234
+
+# re = [int(x) for x in list(str(n))]
+# print(prod(re))
+
+# num = 14
+
+# i = 1
+# while i*i <= num:
+#     if i*i == num:
+#         print(True)
+#         quit()
+#     i += 1
+# print(False)
+
+# nums = [1,7,3,6,5,6]
+# nums = [2,1,-1]
+# print(nums[:1], nums[1+1:])
+# for i in range(len(nums)):
+#     if sum(nums[:i]) == sum(nums[i + 1:]):
+#         print(i)
+#         quit()
+
+
+# keyboard = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
+# # words = ["Hello","Alaska","Dad","Peace"]
+# words = ["omk"]
+# ans = []
+# for i in keyboard:
+#     for j in words:
+#         set_j = set(j.lower())
+#         size = len(set_j)
+#         count = 0
+#         for l in set_j:
+#             if l in i:
+#                 count += 1
+#         if count == size:
+#             ans.append(j)
+# print(ans)
+
+# print(len(set(words[0])))
+
+# 496
+# nums1 = [4,1,2]
+# nums2 = [1,3,4,2]
+# ans = []
+# for i in range(len(nums1)):
+#     for j in range(len(nums2) - 1):
+#         if nums1[i] == nums2[j]:
+#             if nums2[j] < nums2[j + 1]:
+#                 ans.append(nums2[j + 1])
+#             else:
+#                 ans.append(-1)
+# ans.append(-1)
+# print(ans)
+
+# f1 = 0
+# f2 = 1
+# ls = [f1, f2]
+# n = 3
+# t = n
+# while t:
+#     ls.append(f1 + f2)
+#     f1 = f2
+#     f2 = ls[-1]
+#     t -= 1
+# print(ls[n])
+
+# words = ["cat","bt","hat","tree"]
+# chars = "atach"
+
+# for i in words:
+#     for j in chars:
+
+# nums = [0,1,2,3,4]
+# index = [0,1,2,2,1]
+# ans = []
+# for i in range(len(index)):
+#     ans.insert(index[i], nums[i])
+# print(ans)
+
+# nums = [1,3,5,2,4,8,2,2]
+# date = "2080-02-29".split('-')
+# ans = ""
+# for i in date:
+#     ans += bin(int(i))[2:] + "-"
+# print(ans[:-1])
+
+# nums = [4,3,1,6]
+# for i in range(len(nums) - 1):
+#     print(nums[i], " ", nums[i + 1])
+
+# start = 3
+# goal = 4
+
+# def to_binar(n):
+#     binar = ""
+#     while n:
+#         binar += str(n % 2)
+#         n //= 2
+#     return binar[::-1]
+
+# start = to_binar(start)
+# goal = to_binar(goal)
+
+# leng, lens = len(goal), len(start)
+# loop = max(lens, leng)
+# start = '0' * (loop - lens) + start
+# goal = '0' * (loop - leng) + goal
+# print(goal, start)
+# ans = 0
+# for i in range(len(start)):
+#     if start[i] != goal[i]:
+#         ans += 1
+# print(ans)
+
+# nums = [[1,3],[5,8]]
+# ans = set()
+# for i in nums:
+#     ls = set(range(i[0], i[-1] + 1))
+#     ans.update(ls)
+# print(len(ans))
+
+# nums = sorted([5,4,2,3])
+# arr = []
+
+# while len(nums):
+#     arr.extend(nums[:2][::-1])
+#     nums = nums[2:]
+# print(arr)
+
+# s = "2-5g-3-J".replace('-', "").upper()
+# k = 2
+s = "5F3Z-2e-9-w".replace('-', "").upper()
+k = 4
+ans = ''
+res = []
+while len(s) != 0:
+    ans += s[-k:][::-1] + '-'
+    # res.append(s[-k:])
+    s = s[:-k]
+print(ans[::-1][1:])
+# print("-".join(res[::-1]))
+# print(s[-4:])
