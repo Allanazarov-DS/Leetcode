@@ -2493,14 +2493,15 @@ num = -7
 
 # s = "2-5g-3-J".replace('-', "").upper()
 # k = 2
-s = "5F3Z-2e-9-w".replace('-', "").upper()
-k = 4
-ans = ''
-res = []
-while len(s) != 0:
-    ans += s[-k:][::-1] + '-'
-    # res.append(s[-k:])
-    s = s[:-k]
-print(ans[::-1][1:])
+# s = "5F3Z-2e-9-w".replace('-', "").upper()
+# k = 4
+# ans = ''
+# res = []
+# while len(s) != 0:
+#     ans += s[-k:][::-1] + '-'
+#     # res.append(s[-k:])
+#     s = s[:-k]
+# print(ans[::-1][1:])
 # print("-".join(res[::-1]))
 # print(s[-4:])
+
